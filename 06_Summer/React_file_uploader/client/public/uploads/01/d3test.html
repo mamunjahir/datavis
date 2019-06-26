@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="D3byEX 5.9" />
+    <meta charset="utf-8">
+</head>
+<style>
+        table, th, td {
+          border: 1px solid black;
+        }
+</style>
+<body>
+    <div id="canvas" class="canvas">
+
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+
+    d3.csv("./testfile.csv", function(data) {
+    text = "<table>";
+    for (var numberofData = 0; numberofData < data.length; numberofData++){    
+    var obj = data[numberofData];
+    if(numberofData==0){
+        text += "<tr>"
+        for (var key in obj){
+        var attrName = key;
+        text += "<th>" + attrName + "</th>"; 
+        console.log(attrName);
+            }
+        text += "</tr>"
+            }
+    text+="<tr>"
+    for (var key in obj){
+        var attrName = key;
+        var attrValue = obj[key];
+    text+="<td>"+attrValue+"</td>"
+    }
+    text += "</tr>";
+}
+text += "</table>";
+document.getElementById("canvas").innerHTML = text;    
+});
+    </script>
+</body>
+</html>

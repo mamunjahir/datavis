@@ -1,0 +1,25 @@
+
+var mytest=()=>{
+  console.log(text)
+  var text = "<table>";
+  if(numberofData===0){
+      text += "<tr>"
+      for (var key in data){
+      var attrName = key;
+      text += "<th>" + attrName + "</th>"; 
+          }
+      text += "</tr>"
+          }
+  text+="<tr>"
+  for (var key in data){
+      var attrName = key;
+      var attrValue = data[key];
+  text+="<td>"+attrValue+"</td>"
+  }
+  text += "</tr>";
+  console.log(text);
+  numberofData=numberofData+1;
+  text += "</table>";
+}
+
+console.log(numberofData)

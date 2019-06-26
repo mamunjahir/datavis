@@ -1,0 +1,3 @@
+Dataset,Rows,Columns,Column1,Column2,Column3,Column4,Column5,Column6,Column7,Column8,Column9,Column10,Column11,Column12,Column13
+Selected_Scholarship_Applicants_by_College__Beginning_2014.csv,219,12,Year(int64),Processing Snapshot Date(str),Scholarship Name(str),Metric Type(str),Sector Type(str),TAP Sector Group(str),TAP College Code(int64),Federal School Code(int64),TAP College Name(str),College Region Name(str),Headcount Type(str),Headcount(int64),
+Schooldistrictmap.csv,33,4,the_geom(str),Shape_Leng(float64),Shape_Area(float64),SchoolDist(int64),,,,,,,,,

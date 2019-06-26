@@ -1,0 +1,29 @@
+import React,{Component} from 'react';
+class PieChart extends Component{
+state ={A: []}
+handleClick(d) {
+    console.log(d);
+}
+proces(dataset){
+  //for (var a in dataset){
+    this.setState({A:dataset})
+  //}
+  for(var a in dataset){
+    var aa=dataset[a].map((d, i) => ( <td>{d}</td>))
+    console.log("Pie",aa)
+  }
+
+
+}
+render(){
+return(
+<div>
+<form>
+<input type="text" onChange={this.mychangeHandler}></input>
+<button type="button" onClick={() => this.proces(this.props.dataset)}>{"Click me2"} </button>
+</form> 
+{this.state.A.map((d, i) => ( <p key={i}>{d}</p>))}
+</div>
+)
+}}
+export default PieChart;
